@@ -1,11 +1,11 @@
 :::: Multicall sh runner
 ::
-:: A multicall Windows batch file (the _runner_) to provide a transparent 
-:: method to run a sh-script with [busybox-w32](http://frippery.org/busybox/).
+:: A multicall Windows batch file to provide a transparent method to run 
+:: a sh-script (ash shell script, to be precise) with busybox-w32.
 ::
 :: Usage: 
 ::   Suppose the sh-script is "DIR_NAME/SCRIPT_NAME.sh"
-::   - Copy this script to "DIR_NAME/".
+::   - Copy/hardlink this script to "DIR_NAME/". (Symlinking does NOT work.)
 ::   - Rename this script to SCRIPT_NAME.cmd, to run as current user.
 ::   - Or, rename this script to SCRIPT_NAME.admin.cmd, to run as admin.
 ::   - All arguments are passed through directly to the sh-script, so be 
@@ -19,8 +19,9 @@
 ::     - Not required if not to run as admin.
 ::     - App's website: http://code.kliu.org/misc/elevate/
 ::
-:: Author: south.guo@gmail.com
-:: Timestamp: 20200212.1444
+:: Author: mr-south-guo
+:: Website: https://github.com/mr-south-guo/multicall-sh-runner
+:: Timestamp: 20200213.152305
 
 @echo off
 
