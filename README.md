@@ -30,6 +30,11 @@ A multicall Windows batch file (the _runner_) to provide a transparent method to
   - An tiny open-source utility to run commands as admin, from [here](http://code.kliu.org/misc/elevate/).
   - This file is **optional**. You don't need it if you are not planning to use the "Run as admin automatically" feature. (You can always start the _runner_ as admin manually.)
   - It can be in the same directory as the _runner_, or in the `PATH`.
+- `hardlink-runner.cmd`
+  - A utility script to hardlink one _runner_ to multiple _runners_ for a set of sh-scripts, so that you don't have to do it one-by-one.
+  - If running it without parameters, it will create _runners_ for all the sh-script in the same directory, by hard-linking from `sh-runner.cmd`.
+  - Use option `-h` to show help messages for more usage details.
+  - This file is **optional**.
 
 ### Example files
 
@@ -42,7 +47,7 @@ A multicall Windows batch file (the _runner_) to provide a transparent method to
 
 ## FAQ
 
-### Will this work with WSL (Windows Subsystem for Linux)?
+### Will this work with WSL, Cygwin, MSYS, etc.?
 
 I don't know. Maybe you can try it and let me know?
 
